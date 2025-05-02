@@ -2,6 +2,10 @@
 
 A Model Context Protocol server that provides real-time cryptocurrency price data from OKX exchange.
 
+<a href="https://glama.ai/mcp/servers/@PJ-TST-238819/mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@PJ-TST-238819/mcp/badge" alt="OKX Server MCP server" />
+</a>
+
 ## Features
 
 This MCP server connects to the OKX API to provide cryptocurrency price information through a simple tool interface. It includes comprehensive error handling, request logging, and rate limiting via OKX's API.
