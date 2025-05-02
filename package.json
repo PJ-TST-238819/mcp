@@ -5,7 +5,8 @@
   "description": "Basic MCP server to see how they work.",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,10 @@
     "@modelcontextprotocol/sdk": "^1.11.0",
     "crypto": "^1.0.1",
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
   }
 }

@@ -81,4 +81,6 @@ app.get('/mcp', handleSessionRequest);
 // Handle DELETE requests for session termination
 app.delete('/mcp', handleSessionRequest);
 
-app.listen(3000);
+app.listen(3000, () => {
+  console.log("Server is running on http://localhost:3000");
+});
