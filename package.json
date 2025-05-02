@@ -1,34 +1,27 @@
 {
-  "name": "mcp",
-  "version": "1.0.0",
+  "name": "okx-mcp-server",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server",
+  "private": true,
   "type": "module",
-  "description": "Basic MCP server to see how they work.",
-  "main": "index.js",
-  "scripts": {
-    "start": "node ./index.js",
-    "build": "tsc"
+  "bin": {
+    "okx-mcp-server": "./build/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PJ-TST-238819/mcp.git"
-  },
-  "keywords": [
-    "mcp"
+  "files": [
+    "build"
   ],
-  "author": "jaak",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/PJ-TST-238819/mcp/issues"
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
   },
-  "homepage": "https://github.com/PJ-TST-238819/mcp#readme",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.11.0",
-    "crypto": "^1.0.1",
-    "express": "^5.1.0"
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "axios": "^1.8.2"
   },
   "devDependencies": {
-    "@types/express": "^5.0.1",
-    "@types/node": "^22.15.3",
-    "typescript": "^5.8.3"
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
   }
 }
