@@ -1,0 +1,28 @@
+{
+  "name": "mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Basic MCP server to see how they work.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PJ-TST-238819/mcp.git"
+  },
+  "keywords": [
+    "mcp"
+  ],
+  "author": "jaak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PJ-TST-238819/mcp/issues"
+  },
+  "homepage": "https://github.com/PJ-TST-238819/mcp#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.0",
+    "crypto": "^1.0.1",
+    "express": "^5.1.0"
+  }
+}
