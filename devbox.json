@@ -6,9 +6,6 @@
   "shell": {
     "init_hook": [],
     "scripts": {
-      "serve": [
-        "uv run --with mcp[cli] mcp run ./server/server.py"
-      ]
     }
   }
 }

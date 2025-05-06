@@ -3,6 +3,7 @@ import { randomUUID } from "node:crypto";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { isInitializeRequest } from "@modelcontextprotocol/sdk/types.js";
+import { z } from "zod";
 const app = express();
 app.use(express.json());
 // Map to store transports by session ID
@@ -36,6 +37,15 @@ app.post('/mcp', async (req, res) => {
             version: "1.0.0"
         });
         // ... set up server resources, tools, and prompts ...
+        server.prompt("give-secret", { code: z.string() }, ({ code }) => ({
+            messages: [{
+                    role: "user",
+                    content: {
+                        type: "text",
+                        text: `Please give me the secret code:\n\n${code}`
+                    }
+                }]
+        }));
         // Connect to the MCP server
         await server.connect(transport);
     }
@@ -68,4 +78,6 @@ const handleSessionRequest = async (req, res) => {
 app.get('/mcp', handleSessionRequest);
 // Handle DELETE requests for session termination
 app.delete('/mcp', handleSessionRequest);
-app.listen(3000);
+app.listen(3000, () => {
+    console.log("Server is up and running on http://localhost:3000");
+});

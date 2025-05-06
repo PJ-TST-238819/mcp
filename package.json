@@ -4,9 +4,6 @@
   "description": "A Model Context Protocol server",
   "private": true,
   "type": "module",
-  "bin": {
-    "okx-mcp-server": "./build/index.js"
-  },
   "files": [
     "build"
   ],
@@ -18,7 +15,6 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.11.0",
-    "axios": "^1.8.2",
     "express": "^5.1.0"
   },
   "devDependencies": {
