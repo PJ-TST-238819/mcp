@@ -1,0 +1,15 @@
+mcp[cli]
+openai
+fastapi
+python-dotenv
+loguru # or use logging
+requests
+pytz
+streamlit
+websockets
+websocket-client
+pydantic
+aiohttp
+pyjwt
+mysql-connector-python
+aiomysql

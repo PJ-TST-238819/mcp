@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "NPM Start in Devbox",
+            "type": "node",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "runtimeExecutable": "devbox",
+            "runtimeArgs": ["run", "npm", "start"],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "DEBUG": "mcp-server"
+            }
+        }
+    ]
+}

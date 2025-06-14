@@ -1,0 +1,28 @@
+{
+  "name": "mcp-client-ts",
+  "version": "1.0.0",
+  "description": "A multi-provider chat client for ChatGPT, Gemini, and Anthropic in TypeScript.",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.22.0",
+    "@google/generative-ai": "^0.15.0",
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "dotenv": "^16.4.5",
+    "inquirer": "^9.3.2",
+    "install": "^0.13.0",
+    "npm": "^11.4.1",
+    "openai": "^4.52.7"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.14.9",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
+  }
+}
